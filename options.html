@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TSR Skip Download Timer — Settings</title>
+  <style>
+    body { font: 14px/1.5 system-ui, sans-serif; background: #f4f6f9; color: #22303f; max-width: 640px; margin: 32px auto; padding: 0 20px; }
+    .card { background: #fff; border-radius: 12px; padding: 20px 24px; box-shadow: 0 2px 10px rgba(0,0,0,.08); margin-bottom: 18px; }
+    h1 { font-size: 20px; margin: 0 0 6px; }
+    p { margin: 8px 0; }
+    label.row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; cursor: pointer; }
+    input[type=checkbox] { margin-top: 3px; transform: scale(1.25); cursor: pointer; }
+    .hint { color: #68788c; font-size: 12.5px; }
+    code { background: #eef1f5; padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
+    button { margin-top: 10px; padding: 8px 18px; font-size: 14px; border: 0; border-radius: 8px; background: #1e7f4f; color: #fff; cursor: pointer; }
+    .status { color: #1e7f4f; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>TSR Skip Download Timer</h1>
+    <p>Automatically downloads free files from The Sims Resource: removes the manual timer wait and the "log in / leave your email" modals (guest flow).</p>
+  </div>
+
+  <div class="card">
+    <label class="row">
+      <input type="checkbox" id="enabled" checked>
+      <span>
+        <b>Enabled</b>
+        <div class="hint">Auto-download on the countdown page and automatic dismissal of modals.</div>
+      </span>
+    </label>
+
+    <label class="row">
+      <input type="checkbox" id="guestMode" checked>
+      <span>
+        <b>Guest mode</b>
+        <div class="hint">Resets the "5 guest downloads" counter and dismisses login/email prompts so you can download without an account.</div>
+      </span>
+    </label>
+  </div>
+
+  <div class="card">
+    <p><b>How it works</b></p>
+    <p class="hint">
+      On the item page click <b>Download</b> (or <b>Continue Downloading</b>). The extension instantly skips
+      modals and, while you browse, silently starts the server countdown. When you click, it fetches the file
+      URL right away (or within a few seconds) and the download starts automatically through the browser's
+      download manager. VIP-exclusive files are not bypassed.
+    </p>
+    <p class="hint">
+      Installing: open <code>chrome://extensions</code> (or edge://extensions) → Developer mode →
+      Load unpacked → select the folder that contains this <code>manifest.json</code>. The browser starts the
+      download on its own; the file name comes from the server.
+    </p>
+    <button id="save" type="button">Save</button>
+    <span class="status" id="saved"></span>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
