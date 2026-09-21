@@ -28,8 +28,6 @@ The ~8 second delay is enforced **server-side**: the file URL is only issued ~8 
 3. Enable **Developer mode** (toggle in the top-right corner).
 4. Click **Load unpacked** and select the extension folder.
 
-After editing files, reload the extension on the extensions page.
-
 ## Usage
 
 - Navigate to any free item page on The Sims Resource.
