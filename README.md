@@ -1,9 +1,9 @@
-# 📂 TSR Skip Download Timer
 
-A Chromium (Manifest V3) extension for automatically downloading free files from **The Sims Resource** without manually waiting for the download countdown timer or dealing with "log in / leave your email" modals. Works in the guest flow — no account needed.
+# <img width="48" height="48" alt="icon48" src="https://github.com/user-attachments/assets/599cd9ec-0867-4712-80de-f202a2b64f73" /> TSR Skip Download Timer
+
+A Chromium (Manifest V3) AND Firefox-based extension for automatically downloading free files from **The Sims Resource** without manually waiting for the download countdown timer or dealing with "log in / leave your email" modals. Works in the guest flow — no account needed.
 
 ## Features
-
 - **No timer, no navigation.** When you click Download on an item page, the extension intercepts the click, so the site's countdown page is never shown. The download starts automatically through the browser's download manager.
 - **Silent pre-warming.** While you hover over or browse the page, the extension quietly starts the server-side countdown. If at least ~8 seconds have passed by the time you click, the file downloads instantly. If you click sooner, the remaining seconds pass invisibly and the download still starts on its own — no visible countdown digits, no clicks, no redirects.
 - **Modal auto-dismissal.** Email request, "continue downloading" CTA, adblock notice, free sign-up and guest-limit login modals are closed automatically.
@@ -21,12 +21,15 @@ The extension uses the same endpoints the site uses for guests:
 
 The ~8 second delay is enforced **server-side**: the file URL is only issued ~8 seconds after the countdown page is opened. Testing showed pre-made or older tickets do not bypass it, so a literally zero-second download is not possible — but the timer UI and interaction are removed entirely.
 
-## Installation
+## Installation for Chromium-based
 
 1. Download/export this folder (must contain `manifest.json`).
 2. Open `chrome://extensions` (or `edge://extensions` in Edge, `brave://extensions` in Brave) of just Three Dots -> Extensions.
 3. Enable **Developer mode** (toggle in the top-right corner).
 4. Click **Load unpacked** and select the extension folder.
+
+## Installation for Firefox-based
+> Waiting for approve.
 
 ## Usage
 
