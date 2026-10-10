@@ -3,6 +3,8 @@
 
 **Chromium** and **Firefox** extension for automatically downloading free files from **The Sims Resource** without manually waiting for the download countdown timer or dealing with "log in / leave your email" modals. Works in the guest flow — no account needed.
 
+[ChromeWeb Store](https://github.com/smoochie-code-amateur/tsr-skip-timer/releases/download/ver1.1/tsr-time-skip-extension.zip) | [Firefox Add-ons]([https://addons.mozilla.org/uk/firefox/addon/tsr-skip-download-timer/](https://addons.mozilla.org/firefox/downloads/file/5091609/tsr_skip_download_timer-1.0.0.xpi))
+
 ## Features
 - **No timer, no navigation.** When you click Download on an item page, the extension intercepts the click, so the site's countdown page is never shown. The download starts automatically through the browser's download manager.
 - **Silent pre-warming.** While you hover over or browse the page, the extension quietly starts the server-side countdown. If at least ~8 seconds have passed by the time you click, the file downloads instantly. If you click sooner, the remaining seconds pass invisibly and the download still starts on its own — no visible countdown digits, no clicks, no redirects.
